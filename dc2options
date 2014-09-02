@@ -1,0 +1,77 @@
+Impression :
+	p     -> Imprimer le dernier élément de la pile
+	P     -> Imprimer toute la pile
+	e     -> Imprimer le dernier élément de la pile au format scientifique
+	E     -> Imprimer toute la pile au format scientifique
+	:P    -> Imprimer toute la mémoire
+	:E    -> Imprimer toute la mémoire au format scientifique
+	:P{r} -> Imprimer le registre 'r' de la mémoire
+	:E{r} -> Imprimer le registre 'r' de la mémoire au format scientifique
+	o     -> Imprimer les options de précision
+
+Arithmétique
+
+  2 -> 1
+	+   -> Additionne les deux derniers éléments de la pile
+	-   -> Soustrait les deux derniers éléments de la pile
+	*   -> Multiplie les deux derniers éléments de la pile
+	/   -> Divise les deux derniers éléments de la pile
+	%   -> Calcule le modulo des deux derniers éléments de la pile
+	^   -> Calcule la puissance des deux derniers éléments de la pile
+	<=> -> Compare les deux derniers éléments de la pile
+	=   -> Vérifie que les deux derniers éléments de la pile sont égaux
+	<>  -> Vérifie que les deux derniers éléments de la pile sont différents
+	>=  -> Vérifie que les deux derniers éléments de la pile sont supérieurs ou égaux
+	<=  -> Vérifie que les deux derniers éléments de la pile sont inférieurs ou égaux
+	>   -> Vérifie que les deux derniers éléments de la pile sont supérieurs
+	<   -> Vérifie que les deux derniers éléments de la pile sont inférieurs
+
+  1 -> 1
+	|   -> Valeur absolue du dernier élément de la pile
+	v   -> Racine carrée du dernier élément de la pile
+	!   -> Factorielle du dernier élément de la pile
+	cI  -> Convertit le dernier élément de la pile en entier
+	cD  -> Convertit le dernier élément de la pile en nombre décimal
+	c2  -> Convertit le dernier élément de la pile en nombre en base 2
+	c10 -> Convertit le dernier élément de la pile en nombre en base 10
+	c16 -> Convertit le dernier élément de la pile en nombre en base 16
+
+  2 -> 2
+	~   -> moddiv
+
+Contrôle de la pile
+	c    -> Efface le dernier élément de la pile
+	d    -> Duplique le dernier élément de la pile
+	r    -> Renverse l'ordre des deux derniers éléments de la pile
+	C    -> Efface toute la pile
+	D    -> Duplique toute la pile
+	R    -> Renverse l'ordre des éléments de toute la pile
+
+Mémoire
+	:s{r}  -> Place le dernier élément de la pile dans le registre 'r'
+	:S{r}  -> Place tous les éléments de la pile dans le registre 'r'
+	:l{r}  -> Place le dernier élément du registre 'r' dans la pile
+	:L{r}  -> Place tous les éléments du registre 'r' dans la pile
+	:c{r}  -> Efface le dernier élément du registre 'r'
+	:C{r}  -> Efface le registre 'r'
+	:d{r}  -> Duplique le dernier élément du registre 'r'
+	:D{r}  -> Duplique tous les éléments du registre 'r'
+	:r{r}  -> Renverse l'ordre des 2 derniers éléments du registre 'r'
+	:R{r}  -> Renverse l'ordre de tous les éléments du registre 'r'
+	:={r}  -> si l'opération '=' donne 1, fait un :L{r}
+	:<>{r} -> si l'opération '<>' donne 1, fait un :L{r}
+	:>={r} -> si l'opération '>=' donne 1, fait un :L{r}
+	:<={r} -> si l'opération '<=' donne 1, fait un :L{r}
+	:>{r}  -> si l'opération '>' donne 1, fait un :L{r}
+	:<{r}  -> si l'opération '<' donne 1, fait un :L{r}
+
+Paramètres
+	k -> Supprime le dernier élément de la pile et s'en sert comme précision automatique
+	K -> Supprime le dernier élément de la pile et s'en sert comme précision fixe
+
+Chaînes de caractères
+	[] -> Déclare une chaîne de caractères
+	x  -> Exécute le dernier élément comme si c'était un input, en supposant que c'est une chaîne
+	a  -> convertit le dernier élément en chaîne
+	#  -> Début de commentaire
+	h  -> affiche l'aide
